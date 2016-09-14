@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
-var cors = require('cors');
+//var cors = require('cors');++++++++++++++++++++++++++++++++++++
 //var LocalStrategy = require('passport-local').Strategy;
 
 var authenticate = require('./authenticate');
@@ -34,7 +34,7 @@ app.set('view engine', 'jade');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
-app.use(cors());
+//app.use(cors()); ++++++++++++++++++++++++++++++++++++
 //app.options('*',cors());
 //app.use(function(req, res, next) {
 // res.header("Access-Control-Allow-Origin", "*");
