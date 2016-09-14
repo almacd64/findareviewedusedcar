@@ -1,0 +1,74 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">List All Reviews</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Please click on a car to access the review.</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-1">
+                <p></p>
+            </div>
+            <div class="col-xs-12 col-sm-11">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label>Search&nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="text" ng-model="search" class="form-control" placeholder="search">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp&nbsp&nbsp&nbspItems per page&nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="number" min="1" max="100" ng-model="pageSize" value="10" placeholder="10" class="form-control">
+                    </div>
+                </form>
+                <hr>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th ng-click="sort('make')">MAKE
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='make'" ng-class="{'glyphicon-chevron-up':reverse, 'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th ng-click="sort('model')">MODEL
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='model'" ng-class="{'glyphicon-chevron-up':reverse, 'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th ng-click="sort('price')">PRICE
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='price'" ng-class="{'glyphicon-chevron-up':reverse, 'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th ng-click="sort('year')">YEAR
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='year'" ng-class="{'glyphicon-chevron-up':reverse, 'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th ng-click="sort('location')">LOCATION
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='location'" ng-class="{'glyphicon-chevron-up':reverse, 'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                            <th ng-click="sort('zip')">ZIP
+                                <span class="glyphicon sort-icon" ng-show="sortKey=='zip'" ng-class="{'glyphicon-chevron-up':reverse, 'glyphicon-chevron-down':!reverse}"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!tr dir-paginate="review in reviews | filter:search | orderBy:sortKey:reverse" current-page="currentPage">
+                        <tr dir-paginate="review in reviews | filter:search | orderBy:sortKey:reverse | itemsPerPage:pageSize" current-page="currentPage">
+                            <td><a ui-sref="app.reviewdetails({id: review._id})"><b><font color=red>{{review.make}}</font></b></a></td>
+                            <td>{{review.model}}</td>
+                            <td><span id="currency-no-fractions">{{review.price | currency:"$":0}}</span></td>
+                            <td>{{review.year}}</td>
+                            <td>{{review.location}}</td>
+                            <td>{{review.zip}}</td>
+                        </tr>
+                    </tbody>
+                    <dir-pagination-controls max-size="10" directions-links="true" boundary-links="true" on-page-change="pageChanged(newPageNumber)">
+                    </dir-pagination-controls>
+                </table>
+                <dir-pagination-controls max-size="10" directions-links="true" boundary-links="true" on-page-change="pageChanged(newPageNumber)">
+                S</dir-pagination-controls>
+                <hr>
+            </div>
+        </div>
+
+    </div>

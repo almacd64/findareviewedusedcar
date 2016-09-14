@@ -1,0 +1,18 @@
+mongod --dbpath=data
+
+mongo <== mongo shell
+
+db.reviews.save({
+zip: '02445',
+make: 'ford',
+model: 'focus',
+year: 2003
+});
+
+show collections
+
+show dbs
+
+use usedcarreview
+
+db.reviews.find().pretty();
