@@ -9,7 +9,7 @@ var passport = require('passport');
 
 //var cors = require('cors');
 //var LocalStrategy = require('passport-local').Strategy;
-
+ 
 var authenticate = require('./authenticate');
 
 var config = require('./config');
