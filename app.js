@@ -30,7 +30,8 @@ var listReviewsRouter = require('./app/routes/listReviewsRouter');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/views'));
 //app.use(express.static(__dirname + '../public/app'));
 //app.set('views','./public/app/');
 app.set('view engine', 'jade');
