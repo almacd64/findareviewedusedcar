@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     console.log("getting home page");
  // res.render('index', { title: 'Express' });
     // res.sendFile(__dirname + "/index.html" );
-    res.sendFile("./app/views/index.html");
+    res.sendFile("app/views/index.html");
 });
 
 module.exports = router;
