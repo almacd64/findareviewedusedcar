@@ -13,7 +13,7 @@ var passport = require('passport');
 var authenticate = require('./authenticate');
 
 var config = require('./config');
-console.log("path= " + path);
+
 mongoose.connect(config.mongoUrl);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
