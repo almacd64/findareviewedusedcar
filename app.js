@@ -73,7 +73,7 @@ app.use('/reviews', listReviewsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
-    console.log("boohoo we got 404");
+    console.log("boohoo we got 404 " + __dirname);
   err.status = 404;
   next(err);
 });
