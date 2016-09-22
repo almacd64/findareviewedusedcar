@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('findareviewedcarApp')
-.constant("baseURL", "https://findareviewedusedcar2.herokuapp.com")
+.constant("baseURL", "https://findareviewedusedcar2.herokuapp.com/")
 //.constant("baseURL", "http://localhost:3000/")
 //.constant("baseURL", process.env.PORT)
 
