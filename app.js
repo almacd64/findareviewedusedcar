@@ -66,6 +66,8 @@ app.use('/styles', express.static(__dirname + '/styles'));
 
 app.use('/views', express.static(__dirname + '/views'));
 
+app.use('/images', express.static(__dirname + '/images'));
+
 
 app.use('/', routes);
 app.use('/users', users);
