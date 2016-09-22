@@ -61,7 +61,8 @@ app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
-app.use('/scripts', express.static('scripts'));
+app.use('/scripts', express.static(__dirname +'public/app/scripts'));
+app.use('/styles', express.static(__dirname +'public/app/styles'));
 
 
 app.use('/', routes);
