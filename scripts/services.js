@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('findareviewedcarApp')
-.constant("baseURL", "http://localhost:3000/")
+//.constant("baseURL", "http://localhost:3000/")
+.constant("baseURL", process.env.PORT)
 
 .factory('reviewFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
         console.log("in reviewFactory");
