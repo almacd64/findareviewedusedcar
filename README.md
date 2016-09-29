@@ -11,3 +11,12 @@ so the links have actually gone (which is bad).
 
 
 See it running at https://findareviewedusedcar2.herokuapp.com
+
+Still to to :-
+1. Add 'retrive message' when the server is being re-started.
+2. Fix the hamburger.
+3. Fix text 'kepp clear'.
+4. Edit a review.
+5. Show login details.
+6. Delete a review.
+7. Show your own reviews.
