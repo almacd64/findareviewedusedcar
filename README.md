@@ -15,7 +15,7 @@ See it running at https://findareviewedusedcar2.herokuapp.com
 Still to to :-
 1. Add 'retrieve message' when the server is being re-started. <div ng-if="!data">Fetching data...</div>
 2. Fix the hamburger.
-3. Fix text 'kepp clear'.
+3. Fix text 'kepp clear'. see controllers.js
 4. Edit a review.
 5. Show login details.
 6. Delete a review.
